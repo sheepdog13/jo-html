@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="300" height="250" style="border: 1px solid #ff0000;">
+    </canvas>
+
+    <script>
+        let paper = document.getElementById("mycanvas");
+        let context = paper.getContext("2d");
+
+        let grd = context.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "blue");
+        grd.addColorStop(1, "white");
+        context.fillStyle = grd;
+        context.fillRect(10,10,200,150);
+
+        context.fillStyle = "#ffffff";
+        context.font = "30px 넥슨고딕Lv1";
+        context.fillText("CANVAS", 10, 50);
+        
+    </script>
+</body>
+</html>
